@@ -3,7 +3,9 @@ using System;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
+   
 {
+    public int damage;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,18 +34,23 @@ public class Enemy : MonoBehaviour
 
     }
 
-
-    private void FixedUpdate()
+        private void FixedUpdate()
     {
         
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        string logMessage = "Enemy collided with " + other.name;
+       
 
-        Debug.Log(logMessage);
+        if (other.tag.Equals("Player")) 
+        {
 
+            Playercontroller playerController = other.gameObject.GetComponent<Playercontroller>();
+            playerController.TakeDamage(damage);
+
+        }
+                
     }
 
 
