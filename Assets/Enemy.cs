@@ -42,7 +42,7 @@ public class Enemy : MonoBehaviour
     {
         string logMessage = "Enemy collided with " + other.name;
 
-       // Debug.Log(logMessage);
+        Debug.Log(logMessage);
 
     }
 
