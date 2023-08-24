@@ -585,7 +585,7 @@ GameObject:
   - component: {fileID: 983023107}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -668,6 +668,7 @@ MonoBehaviour:
   rigidBody: {fileID: 983023104}
   speed: 25
   jumpSpeed: 165
+  health: 0
   isTouchingGround: 0
 --- !u!212 &983023106
 SpriteRenderer:
